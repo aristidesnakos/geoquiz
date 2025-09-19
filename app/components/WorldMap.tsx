@@ -20,7 +20,18 @@ export default function WorldMap({ onCountryClick, selectedCountry }: WorldMapPr
     geo.properties?.ADMIN || geo.properties?.NAME || geo.properties?.name || geo.properties?.NAME_EN || 'Unknown'
 
   return (
-    <ComposableMap>
+    <ComposableMap
+      projection="geoMercator"
+      projectionConfig={{
+        scale: 147,
+        center: [0, 20],
+      }}
+      style={{
+        width: '100%',
+        height: 'auto',
+        maxHeight: '70vh',
+      }}
+    >
       <Geographies geography={geoUrl}>
         {({ geographies }) =>
           geographies.map((geo) => {
