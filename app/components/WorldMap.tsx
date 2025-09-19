@@ -7,7 +7,7 @@ interface WorldMapProps {
   selectedCountry: string | null
 }
 
-const geoUrl = '/world-simple.json'
+const geoUrl = '/countries.geojson'
 
 const mapStyles = {
   default: { outline: 'none', stroke: '#FFFFFF', strokeWidth: 0.5 },
@@ -17,7 +17,7 @@ const mapStyles = {
 
 export default function WorldMap({ onCountryClick, selectedCountry }: WorldMapProps) {
   const getCountryName = (geo: any): string => 
-    geo.properties?.NAME || geo.properties?.name || geo.properties?.NAME_EN || 'Unknown'
+    geo.properties?.ADMIN || geo.properties?.NAME || geo.properties?.name || geo.properties?.NAME_EN || 'Unknown'
 
   return (
     <ComposableMap>
