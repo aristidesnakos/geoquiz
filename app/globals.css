@@ -43,6 +43,81 @@ body {
   font-weight: bold;
 }
 
+/* Navigation styles */
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.nav-button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-button.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #667eea;
+  border-color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+/* Flag Quiz styles */
+.flag-quiz {
+  text-align: center;
+}
+
+.continent-selector {
+  margin-bottom: 2rem;
+}
+
+.continent-selector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.continent-select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  background: white;
+  color: #333;
+  outline: none;
+}
+
+.continent-select:focus {
+  border-color: #764ba2;
+}
+
+.flag-container {
+  text-align: center;
+}
+
+.flag-display {
+  margin-bottom: 1.5rem;
+}
+
+.flag-emoji {
+  font-size: 8rem;
+  line-height: 1;
+  display: block;
+}
+
 .map-container {
   background: white;
   border-radius: 20px;
